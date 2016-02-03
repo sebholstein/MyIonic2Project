@@ -1,0 +1,25 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Hello Ionic</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+  <button (click)="location = locations[0]">1</button> <button (click)="location = locations[1]">2</button>
+  <sebm-google-map
+    [latitude]="location.latitude"
+    [longitude]="location.longitude"
+    [zoom]="zoom">
+
+    <sebm-google-map-marker
+      [latitude]="location.latitude"
+      [longitude]="location.longitude"
+      [label]="location.name">
+    </sebm-google-map-marker>
+
+  </sebm-google-map>
+
+</ion-content>
